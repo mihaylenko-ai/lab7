@@ -405,8 +405,6 @@ end
 **L2**
 
 ```
-service routing protocols model multi-agent
-!
 no logging console
 no logging monitor
 !
@@ -505,7 +503,7 @@ mlag configuration
    peer-link Port-Channel34
    dual-primary detection delay 1
 !
-router bgp 65502
+router bgp 65501
    router-id 1.0.0.2
    no bgp default ipv4-unicast
    timers bgp 1 3
@@ -543,7 +541,7 @@ router bgp 65502
       network 172.16.12.1/32
    !
    vrf VRF1
-      rd 65502:1
+      rd 65501:2
       route-target import evpn 1:111111
       route-target export evpn 1:111111
       redistribute connected
