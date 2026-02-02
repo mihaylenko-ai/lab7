@@ -173,6 +173,7 @@ router bgp 65550
    bgp listen range 172.16.0.0/16 peer-group EVPN peer-filter LEAFS_ASN
    bgp listen range 10.0.0.0/8 peer-group LEAF peer-filter LEAFS_ASN
    neighbor EVPN peer group
+   neighbor EVPN next-hop-unchanged
    neighbor EVPN update-source Loopback0
    neighbor EVPN ebgp-multihop 3
    neighbor EVPN send-community extended
@@ -233,6 +234,7 @@ router bgp 65550
    bgp listen range 172.16.0.0/16 peer-group EVPN peer-filter LEAFS_ASN
    bgp listen range 10.0.0.0/8 peer-group LEAF peer-filter LEAFS_ASN
    neighbor EVPN peer group
+   neighbor EVPN next-hop-unchanged
    neighbor EVPN update-source Loopback0
    neighbor EVPN ebgp-multihop 3
    neighbor EVPN send-community extended
